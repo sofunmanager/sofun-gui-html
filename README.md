@@ -12,7 +12,7 @@ win:
     [Version 0.6.8](https://gitee.com/sofunmanager/sofun-chat-gpt/raw/master/release/mac/sofun-chaGPT%20Setup%200.6.8.dwg) -->
 
 
-### 需要其他平台安装请使用以下步骤自行编译
+<!-- ### 需要其他平台安装请使用以下步骤自行编译 -->
 
 ## 1.下载
 ```bash
