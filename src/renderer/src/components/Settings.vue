@@ -144,7 +144,7 @@ const gptModels = ref([
   "gpt-3.5-turbo-16k",
   "gpt-3.5-turbo-16k-0613",
   "gpt-4",
-  "gpt-4-061",
+  "gpt-4-0314",
 ]);
 
 const apiList=ref([

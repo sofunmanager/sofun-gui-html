@@ -1,7 +1,7 @@
 <template>
     <el-container>
         <el-header>
-            <Header @custom-event="openSettings"/>
+            <Header :openSettings="openSettings" :addNewTab="addNewTab"/>
         </el-header>
         <el-main>
             <Content ref="contentRef"/>
@@ -17,22 +17,25 @@ import Header from "@/components/root/Header.vue"
 import Content from "@/components/root/Content.vue"
 import Settings from "@/components/Settings.vue"
 
-
+import { getCurrentInstance } from "vue";
+let globalProperties = getCurrentInstance()?.appContext.config.globalProperties;
+let _global = globalProperties?.$global;
 
 // 创建子组件的引用
 const settingsRef  = ref(null)
 const contentRef  = ref(null)
 
+const openSettings=()=>{
+    settingsRef.value.openSettings()
+}
 
-const openSettings=(key)=>{
-    if(key==="openSettings"){
-        settingsRef.value.openSettings()
-    }
-    if(key==="addNewTab"){
-        contentRef.value.addNewTab()
-    }
-    
-};
+const addNewTab=()=>{
+    contentRef.value.addNewTab()
+}
+
+
+
+
 </script>
 
 <style scoped>

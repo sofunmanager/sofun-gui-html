@@ -6,9 +6,10 @@
         :key="item"
         class="msg-row"
         :class="'msg-row-' + item.role"
+        
       >
         <el-popover
-          
+          :placement="(item.role==='user'?'left-end':'right-end')"
           :width="170"
           trigger="hover"
         >
@@ -64,8 +65,7 @@ import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
 import "prismjs/plugins/toolbar/prism-toolbar.js";
 import "prismjs/plugins/toolbar/prism-toolbar.css";
-/* 在引入拷贝到剪贴板这个插件之前，要先引入上面这个prism-toolbar.js和prism-toolbar.css
-     然后，代码的右上角在高亮操作之后，就会出现拷贝代码的按钮，不过是英文的，可以使用data-prismjs-copy等属性修改为中文 */
+
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.js";
 
 import "prismjs/components/prism-markup";
@@ -110,11 +110,12 @@ onMounted(() => {
 
 const send = (text) => {
   sendGPT(text);
-  footerRef.value.sendOver();
+  
 };
 
-const api = new Api2d(_global.settings.aip_key, _global.settings.apiUrl);
+let api;
 function sendGPT(text) {
+  api = new Api2d(_global.settings.aip_key, _global.settings.apiUrl);
   if (list.value.length <= 0) {
     let tit = text;
     if (tit.length > 10) {
@@ -147,16 +148,29 @@ function sendGPT(text) {
         pushMsg(string);
         loading.value = false;
         save();
+        footerRef.value.sendOver();
       },
     })
     .catch((e) => {
-      ElMessage({
-        message: e.message,
-        type: "error",
-      });
+      let msg=e.message;
+      if(msg.indexOf("Unauthorized.0 no forward key")!==-1){
+        ElMessage({
+            message: "请在设置中填写KEY后再使用！",
+            type: "warning",
+        });
+      }else{
+        ElMessage({
+          message: `请求出错[${e.message}],开启一个新的会话试试~`,
+          type: "error",
+        });
+      }
+
       api.abort(); // 主动取消请求
-      list.value.slice(list.value.length - 1, 1);
+      list.value.pop();
+      loading.value = false;
+
     });
+
 
   api.setTimeout(1000 * 20);
   

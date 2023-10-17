@@ -2,14 +2,14 @@
   <div class="header-inner">
     <ul class="left-menu">
       <li>
-        <el-button type="primary" :icon="Plus" @click="onNewTabClick"
+        <el-button type="primary" :icon="Plus" @click="addNewTab"
           >新会话</el-button
         >
       </li>
     </ul>
     <ul class="right-menu">
       <li>
-        <el-button :icon="Setting" @click="onSettingClick">设置</el-button>
+        <el-button :icon="Setting" @click="openSettings">设置</el-button>
       </li>
       <li>
         <el-switch
@@ -29,7 +29,10 @@ import { Moon, Sunny, Setting, Plus} from "@element-plus/icons-vue";
 import { ElMessage } from "element-plus";
 
 
-
+const props = defineProps({
+  openSettings: Function,
+  addNewTab: Function,
+});
 
 //获取系统主题模式
 const isDarkTheme_sys =
@@ -62,12 +65,7 @@ function setTheme(handle) {
 
 const emits = defineEmits(["custom-event"]);
 
-function onSettingClick() {
-  emits("custom-event", "openSettings");
-}
-function onNewTabClick() {
-  emits("custom-event", "addNewTab");
-}
+
 </script>
 
 <style scoped>

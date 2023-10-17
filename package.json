@@ -1,9 +1,10 @@
 {
-  "name": "sofun-chaGPT",
-  "version": "0.7",
+  "name": "sofun-chatGPT",
+  "version": "1.0.0",
   "description": "An Electron application with Vue",
   "main": "./out/main/index.js",
-  "author": "sofunmanager@163.com",
+  "email": "sofunmanager@163.com",
+  "author": "SIMO",
   "homepage": "http://www.sofunmanager.com",
   "scripts": {
     "format": "prettier --write .",

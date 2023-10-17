@@ -5,11 +5,11 @@
 <!-- #### 安装包下载：
 
 win:
-#### [Version 0.6.8](https://gitee.com/sofunmanager/sofun-chat-gpt/raw/master/release/win/sofun-chaGPT%20Setup%200.6.8.exe)
-#### [Version 0.6.9](https://gitee.com/sofunmanager/sofun-chat-gpt/raw/master/release/win/sofun-chaGPT%20Setup%200.6.9.exe) -->
+#### [Version 0.6.8](https://gitee.com/sofunmanager/sofun-chat-gpt/raw/master/release/win/sofun-chatGPT%20Setup%200.6.8.exe)
+#### [Version 0.6.9](https://gitee.com/sofunmanager/sofun-chat-gpt/raw/master/release/win/sofun-chatGPT%20Setup%200.6.9.exe) -->
 
 <!-- mac: 
-    [Version 0.6.8](https://gitee.com/sofunmanager/sofun-chat-gpt/raw/master/release/mac/sofun-chaGPT%20Setup%200.6.8.dwg) -->
+    [Version 0.6.8](https://gitee.com/sofunmanager/sofun-chat-gpt/raw/master/release/mac/sofun-chatGPT%20Setup%200.6.8.dwg) -->
 
 
 <!-- ### 需要其他平台安装请使用以下步骤自行编译 -->
