@@ -1,6 +1,6 @@
 {
   "name": "sofun-chatGPT",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An Electron application with Vue",
   "main": "./out/main/index.js",
   "email": "sofunmanager@163.com",
@@ -18,15 +18,16 @@
     "build:linux": "npm run build && electron-builder --linux --config"
   },
   "dependencies": {
-    "api2d": "^0.1.36",
-    "axios": "^1.5.1",
-    "element-plus": "^2.3.14",
-    "prismjs": "^1.29.0",
-    "sass": "^1.68.0",
-    "nprogress": "^0.2.0",
     "@electron-toolkit/preload": "^2.0.0",
     "@electron-toolkit/utils": "^2.0.0",
-    "electron-updater": "^6.1.1"
+    "api2d": "^0.1.36",
+    "axios": "^1.5.1",
+    "electron-updater": "^6.1.1",
+    "element-plus": "^2.3.14",
+    "marked": "^10.0.0",
+    "nprogress": "^0.2.0",
+    "prismjs": "^1.29.0",
+    "sass": "^1.68.0"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config": "^1.0.1",

@@ -1,8 +1,10 @@
 <template>
     <Home/>
+    <Version/>
 </template>
 <script setup>
 import Home from "@/views/Home.vue";
+import Version from "@/store/Version.vue"
 // import { version } from '../../../../package.json';
 
 
@@ -13,7 +15,9 @@ window.addEventListener('contextmenu', ()=>{
 
 </script>
 <style scoped>
-    
+    *{
+        outline: none;
+    }
 
 
 </style>

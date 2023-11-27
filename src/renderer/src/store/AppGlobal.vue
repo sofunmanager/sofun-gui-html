@@ -31,8 +31,8 @@ const storageKey={
   SE_LIST:"_sofun_sesstion_list",
   SE:"_sofun_session_",
   SETTINGS:"_sofun_settings",
-  ACTIVE_TAB:"_sofun_active_tab"
-
+  ACTIVE_TAB:"_sofun_active_tab",
+  NEW_VERSION:"_sofun_new_version"
 }
 
 
