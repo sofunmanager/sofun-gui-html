@@ -1,6 +1,5 @@
-# sofun-chat-gpt
+# sofun-chat-gpt（基于vite-electron的chatGPT客户端工具）
 
-# 基于vite-electron的chatGPT客户端工具
 
 <!-- #### 安装包下载：
 
@@ -10,8 +9,15 @@ win:
 
 <!-- mac: 
     [Version 0.6.8](https://gitee.com/sofunmanager/sofun-chat-gpt/raw/master/release/mac/sofun-chatGPT%20Setup%200.6.8.dwg) -->
+## windows安装包下载
+
+#### [Version 1.1.0](https://gitee.com/sofunmanager/sofun-chat-gpt/raw/master/dist/sofun-chatGPT%20Setup%201.1.0.exe)
 
 
+#### [Version 1.0.0](https://gitee.com/sofunmanager/sofun-chat-gpt/raw/master/dist/sofun-chatGPT%20Setup%201.0.0.exe)
+
+
+# 操作步骤
 <!-- ### 需要其他平台安装请使用以下步骤自行编译 -->
 
 ## 1.下载

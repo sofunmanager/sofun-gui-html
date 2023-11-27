@@ -90,13 +90,18 @@
             />
           </el-form-item>
 
-          
-
         </el-form>
+
+
+        
+
       </div>
     </template>
     <template #footer>
       <div style="margin-bottom:30px">
+
+
+        
         <el-row style="padding:10px 0;">
           <el-text class="mx-1" type="warning" >
             <el-icon :size="size" :color="color">
@@ -107,9 +112,16 @@
           </el-text>
           
         </el-row>
-        <el-row style="text-align:center;">
+
+        <el-row style="padding:10px 0;">
+          <span style="font-size: 14px;padding-right: 10px;">当前版本：v{{currVersion}}</span>
+          <el-link type="primary" target="_blank" href="https://gitee.com/sofunmanager/sofun-chat-gpt/tree/master/dist">更多版本</el-link>
+        </el-row>
+
+        <el-row style="text-align:center;padding:10px 0;">
           <el-tag  type="danger">该工具仅供学习，禁止商用！</el-tag>
         </el-row>
+
       </div>
       <div style="flex: auto">
         <el-button @click="cancelClick">取消</el-button>
@@ -119,6 +131,7 @@
   </el-drawer>
 </template>
 <script setup>
+import { version as currVersion } from '../../../../package.json'
 import { ref, reactive } from "vue";
 import { ElMessageBox, ElMessage } from "element-plus";
 import { Refresh,QuestionFilled } from "@element-plus/icons-vue";
