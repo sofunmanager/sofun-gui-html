@@ -29,6 +29,12 @@ let _global = globalProperties?.$global
 const showPanel = ref(false)
 
 const versionInfo = ref({
+  '1.1.1': {
+    info: [
+      '增加模型',
+      '修复gpt4错误',
+    ]
+  },
   '1.1.0': {
     info: [
       '修复tab标签名称显示异常',
